@@ -1,6 +1,6 @@
 import * as puppeteer from 'puppeteer';
-import {PURCHASED_LIST_URL} from '../../utils/constants';
 import PurchaseInterface from '../../interface/purchase_interface';
+import { PURCHASED_LIST_URL } from '../../utils/constants';
 
 async function getPurchaseHistory(
   userId: string
