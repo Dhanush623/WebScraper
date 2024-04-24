@@ -1,6 +1,6 @@
 # WEB SCRAPER - ASSESSMENT
 
-This project scrape data from https://dhanush623.github.io/assessment for particular user who has logged in.
+This project is designed to scrap data from https://dhanush623.github.io/assessment for particular user who has logged in.
 
 ## Prerequisites
 
@@ -19,7 +19,8 @@ A few resources to get you started if this is your first project:
 1. Clone this repo(https://github.com/Dhanush623/WebScraper.git)
 2. Navigate to the project directory
 3. Install dependencies
-    npm i
+        
+        npm i
 
 ### To Run Application
 
@@ -45,10 +46,13 @@ A few resources to get you started if this is your first project:
 
     There five user for testing purpose. If any other username or password entered then user will not allow to next step.
     
-    | Username          | Password              | Display Name              |
-    |-------------------|-----------------------|---------------------------|
-    | john              | johnsmith             |John Smith                 |
-    | emily             | emily@johnson         |Emily Johnson              |
-    | brown             | brown#321             |Michael Brown              |
-    | williams          | williams#007          |Sarah Williams             |
-    | david             |david@123              |David Jones                |
+    |------------------------------------------------------------------------|
+    | Username          | Password              | Display Name               |
+    |-------------------|-----------------------|----------------------------|
+    | john              | johnsmith             | John Smith                 |
+    | emily             | emily@johnson         | Emily Johnson              |
+    | brown             | brown#321             | Michael Brown              |
+    | williams          | williams#007          | Sarah Williams             |
+    | david             | david@123             | David Jones                |
+    |------------------------------------------------------------------------|
+    

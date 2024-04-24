@@ -1,6 +1,6 @@
 import * as puppeteer from 'puppeteer';
-import {SEARCH_LIST_URL} from '../../utils/constants';
 import SearchInterface from '../../interface/search_interface';
+import {SEARCH_LIST_URL} from '../../utils/constants';
 
 async function searchItems(query: string): Promise<SearchInterface[] | null> {
   const browser = await puppeteer.launch();
@@ -11,14 +11,12 @@ async function searchItems(query: string): Promise<SearchInterface[] | null> {
   await page.click('button');
 
   const results: SearchInterface[] = [];
-
-  const purchasedListItems = await page.$$('#searchResults li');
-
-  if (purchasedListItems === null) {
+  const searchListItems = await page.$$('#searchResults li');
+  if (searchListItems === null) {
     return null;
   }
   let counter = 0;
-  for (const itemElement of purchasedListItems) {
+  for (const itemElement of searchListItems) {
     if (counter >= 10) {
       break;
     }
@@ -37,6 +35,10 @@ async function searchItems(query: string): Promise<SearchInterface[] | null> {
   }
   await browser.close();
   return results;
+}
+
+function getValue(element: HTMLLIElement, key: string): string {
+  return element.querySelector(key)?.textContent?.split(': ')[1] || ''
 }
 
 export default searchItems;
